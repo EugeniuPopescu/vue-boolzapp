@@ -89,7 +89,7 @@ const opzioni = {
                     ],
                 },
                 {
-                    name: 'Alessandro L.',
+                    name: 'Alessandra L.',
                     avatar: './img/avatar_5.png',
                     visible: true,
                     messages: [

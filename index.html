@@ -22,9 +22,9 @@
         <div id="app ">
             <div class="container my-4">
                 <!-- 1st row -->
-                <div class="row">
+                <div class="row border-bottom border-dark-subtle">
                     <!-- user part -->
-                    <div class="col-4 d-flex justify-content-between bg-dark-subtle ">
+                    <div class="col-4 d-flex justify-content-between bg-dark-subtle border-end border-dark-subtle">
                         <!-- img and name -->
                         <div class="d-flex justify-content-center align-items-center py-2">
                             <img src="./img/avatar_io.jpg" >
@@ -41,7 +41,217 @@
                     </div>
 
                     <!-- contact part -->
-                    <div class="col-8 bg-warning">Messages</div>
+                    <div class="col-8 d-flex justify-content-between bg-dark-subtle border-end"> 
+                        <!-- img and name -->
+                        <div class="d-flex justify-content-center align-items-center py-2">
+                            <img src="./img/avatar_1.jpg" >
+                            <div class="d-flex flex-column">
+                                <span class="px-1">Michele</span>
+                                <span class="px-1 smallText">Ultimo accesso oggi alle 12.00</span>
+                            </div>
+                        </div>
+
+                        <!-- favicon -->
+                        <div class="d-flex justify-content-center align-items-center py-2">
+                            <i class="fa-solid fa-magnifying-glass px-2" style="color: #7a7a7a;"></i>
+                            <i class="fa-solid fa-paperclip px-2" style="color: #7a7a7a;"></i>
+                            <i class="fa-solid fa-ellipsis-vertical px-2" style="color: #7a7a7a;"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2nd row -->
+                <div class="row">
+                    <!-- contacts part -->
+                    <div class="col-4 d-flex flex-column px-0">
+                        <!-- notification -->
+                        <div class="notification d-flex align-items-center p-2 notification">
+                            <i class="notificationIcon fa-solid fa-bell-slash"></i>
+                            <div class="d-flex flex-column">
+                                <span class="px-1">Ricevi notifiche di nuovi messaggi</span>
+                                <a href="#" class="px-1 smallText text-reset">Attiva notifiche desktop</a> 
+                            </div>
+                        </div>
+
+                        <!-- search -->
+                        <div class="bg-dark-subtle px-3">
+                            <nav class="navbar bg-dark-subtle">
+                                <form class="container-fluid">
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="basic-addon1">
+                                            <i class="fa-solid fa-magnifying-glass" style="color: #7a7a7a;"></i></span>
+                                        <input type="text" class="form-control smallText" placeholder="Cerca o inizia una nuova chat"
+                                        aria-label="Username" aria-describedby="basic-addon1">
+                                    </div>
+                                </form>
+                            </nav>
+                        </div>
+
+                        <!-- contacts -->
+                        <div class="contacts overflow-y-auto">
+                            <div class="d-flex justify-content-between bg-light p-2 border-top">
+                                <div class="d-flex">
+                                    <img src="./img/avatar_1.jpg" >
+                                    <div class="d-flex flex-column">
+                                        <span class="px-1">Michele</span>
+                                        <span class="px-1 smallText">Ultimo accesso oggi alle 12.00</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="px-1 smallText">12.00</span>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-between bg-light p-2 border-top">
+                                <div class="d-flex">
+                                    <img src="./img/avatar_2.jpg" >
+                                    <div class="d-flex flex-column">
+                                        <span class="px-1">Fabio</span>
+                                        <span class="px-1 smallText">Ultimo accesso oggi alle 12.00</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="px-1 smallText">12.00</span>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-between bg-light p-2 border-top">
+                                <div class="d-flex">
+                                    <img src="./img/avatar_3.jpg" >
+                                    <div class="d-flex flex-column">
+                                        <span class="px-1">Samuele</span>
+                                        <span class="px-1 smallText">Ultimo accesso oggi alle 12.00</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="px-1 smallText">12.00</span>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-between bg-light p-2 border-top">
+                                <div class="d-flex">
+                                    <img src="./img/avatar_4.jpg" >
+                                    <div class="d-flex flex-column">
+                                        <span class="px-1">Alessandro B.</span>
+                                        <span class="px-1 smallText">Ultimo accesso oggi alle 12.00</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="px-1 smallText">12.00</span>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-between bg-light p-2 border-top">
+                                <div class="d-flex">
+                                    <img src="./img/avatar_5.jpg" >
+                                    <div class="d-flex flex-column">
+                                        <span class="px-1">Alessandra L.</span>
+                                        <span class="px-1 smallText">Ultimo accesso oggi alle 12.00</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="px-1 smallText">12.00</span>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-between bg-light p-2 border-top">
+                                <div class="d-flex">
+                                    <img src="./img/avatar_6.jpg" >
+                                    <div class="d-flex flex-column">
+                                        <span class="px-1">Claudia</span>
+                                        <span class="px-1 smallText">Ultimo accesso oggi alle 12.00</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="px-1 smallText">12.00</span>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-between bg-light p-2 border-top">
+                                <div class="d-flex">
+                                    <img src="./img/avatar_7.jpg" >
+                                    <div class="d-flex flex-column">
+                                        <span class="px-1">Federico</span>
+                                        <span class="px-1 smallText">Ultimo accesso oggi alle 12.00</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="px-1 smallText">12.00</span>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-between bg-light p-2 border-top">
+                                <div class="d-flex">
+                                    <img src="./img/avatar_8.jpg" >
+                                    <div class="d-flex flex-column">
+                                        <span class="px-1">Davide</span>
+                                        <span class="px-1 smallText">Ultimo accesso oggi alle 12.00</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="px-1 smallText">12.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- messages part -->
+                    <div class="col-8 messages d-flex flex-column justify-content-between p-0"> 
+                        <!-- chat -->
+                        <div class="mx-5 my-4 overflow-y-visible">
+                            
+                            <!-- sent -->
+                            <div class="d-flex justify-content-end my-1">
+                                <div class="sent msg d-flex align-items-end rounded p-1">
+                                    <p class="mx-2 pt-2">Ciao ciao prova</p>
+                                    <span class="smallText ms-3">15:50</span>
+                                </div>
+                            </div>
+
+                            <!-- receved -->
+                            <div class="d-flex justify-content-start my-1">
+                                <div class="receved bg-light msg d-flex align-items-end rounded p-1">
+                                    <p class="mx-2 pt-2">Ciao ciao prova</p>
+                                    <span class="smallText ms-3">15:50</span>
+                                </div>
+                            </div>
+
+                            <!-- sent -->
+                            <div class="d-flex justify-content-end my-1">
+                                <div class="sent msg d-flex align-items-end rounded p-1">
+                                    <p class="mx-2 pt-2">Ciao ciao erfaefaesfwes</p>
+                                    <span class="smallText ms-3">15:50</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- txt area -->
+                        <div class="chat bg-dark-subtle">
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-auto">
+                                    <i class="fa-regular fa-face-smile fa-lg m-4" style="color: #7a7a7a;"></i>
+                                </div>
+
+                                <div class="col p-0">
+                                    <div class="">
+                                        <input class="form-control smallText" type="text" placeholder="Scrivi un messaggio" aria-label=".form-control-sm example">
+                                    </div>
+                                </div>
+
+                                <div class="col-auto">
+                                    <i class="fa-solid fa-microphone fa-lg m-4" style="color: #7a7a7a;"></i>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
                 </div>
                 
             </div>
