@@ -75,14 +75,12 @@
                         <!-- search -->
                         <div class="bg-dark-subtle px-3">
                             <nav class="navbar bg-dark-subtle">
-                                <form class="container-fluid">
-                                    <div class="input-group">
-                                        <span class="input-group-text" id="basic-addon1">
-                                            <i class="fa-solid fa-magnifying-glass" style="color: #7a7a7a;"></i></span>
-                                        <input type="text" class="form-control smallText" placeholder="Cerca o inizia una nuova chat"
-                                        aria-label="Username" aria-describedby="basic-addon1">
-                                    </div>
-                                </form>
+                                <div class="input-group">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <i class="fa-solid fa-magnifying-glass" style="color: #7a7a7a;"></i></span>
+                                    <input type="text" class="form-control smallText" placeholder="Cerca o inizia una nuova chat"
+                                    aria-label="Username" aria-describedby="basic-addon1">
+                                </div>
                             </nav>
                         </div>
 
@@ -207,30 +205,39 @@
                     <div class="col-8 messages d-flex flex-column justify-content-between p-0"> 
                         <!-- chat -->
                         <div class="mx-5 my-4 overflow-y-visible">
-                            
-                            <!-- sent -->
-                            <div class="d-flex justify-content-end my-1">
-                                <div class="sent msg d-flex align-items-end rounded p-1">
-                                    <p class="mx-2 pt-2">Ciao ciao prova</p>
+                            <!-- sent/receved -->
+                            <!-- 
+                                SE lo statos è sent allora mi prende proprietà del sent
+                                ALTRIMENTI mi prende le proprietà del recived
+                             -->
+                            <div v-for="(message, i) in contacts[0].messages"
+                            :class="message.status == 'sent' ? 'd-flex justify-content-end' : 'd-flex justify-content-start'"
+                            class="my-1">
+                                <!-- 
+                                    ternario per regolarmi il div
+                                 -->
+                                <div :class="message.status == 'sent' ? 'sent' : 'bg-light' "
+                                class="msg d-flex align-items-end rounded p-1">
+                                    <p class="mx-2 pt-2">{{ message.message }}</p>
                                     <span class="smallText ms-3">15:50</span>
                                 </div>
                             </div>
 
                             <!-- receved -->
-                            <div class="d-flex justify-content-start my-1">
-                                <div class="receved bg-light msg d-flex align-items-end rounded p-1">
+                            <!-- <div class="d-flex justify-content-start my-1">
+                                <div class="bg-light msg d-flex align-items-end rounded p-1">
                                     <p class="mx-2 pt-2">Ciao ciao prova</p>
                                     <span class="smallText ms-3">15:50</span>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <!-- sent -->
-                            <div class="d-flex justify-content-end my-1">
+                            <!-- <div class="d-flex justify-content-end my-1">
                                 <div class="sent msg d-flex align-items-end rounded p-1">
                                     <p class="mx-2 pt-2">Ciao ciao erfaefaesfwes</p>
                                     <span class="smallText ms-3">15:50</span>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <!-- txt area -->
                         <div class="chat bg-dark-subtle">
