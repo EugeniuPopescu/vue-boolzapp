@@ -1,8 +1,5 @@
-.completed {
-    text-decoration: line-through;
-}
-
-.inputError {
-    font-size: .75em;
-    color: crimson;
+/*** img ***/
+img {
+    width: 3rem;
+    border-radius: 50%;
 }
