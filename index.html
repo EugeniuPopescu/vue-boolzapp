@@ -42,11 +42,11 @@
                     <!-- contact part -->
                     <div class="col-8 d-flex justify-content-between bg-dark-subtle border-end"> 
                         <!-- img and name -->
-                        <div v-for="(contact, i) in contacts[count]"
+                        <div 
                         class="d-flex justify-content-center align-items-center py-2">
-                            <img src="./img/avatar_1.jpg" >
+                            <img :src="contacts[count].avatar" >
                             <div class="d-flex flex-column">
-                                <span class="px-1">{{ contact.name }}</span>
+                                <span class="px-1">{{ contacts[count].name }}</span>
                                 <span class="px-1 smallText">Ultimo accesso oggi alle 12.00</span>
                             </div>
                         </div>
