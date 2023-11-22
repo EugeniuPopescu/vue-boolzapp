@@ -219,8 +219,15 @@
                                  -->
                                 <div :class="message.status == 'sent' ? 'sent' : 'bg-light' "
                                 class="msg d-flex align-items-end rounded p-1">
-                                    <p class="mx-2 pt-2">{{ message.message }}</p>
-                                    <span class="smallText ms-3">15:50</span>
+                                    <span class="mx-2 py-1">{{ message.message }}</span>
+                                    <span class="smallText ms-1">15:50</span>
+                                    <div class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a @click="deleteMessage(i)" 
+                                                class="dropdown-item">Delete</a></li> 
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
 

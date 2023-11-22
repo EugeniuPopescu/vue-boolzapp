@@ -199,6 +199,9 @@ const opzioni = {
             console.log(newMess);
             this.receivedMessage = '';
         },
+        deleteMessage(index) {
+            this.contacts[this.count].messages.splice(index, 1);
+        }
 
     },
     mounted() {
