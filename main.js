@@ -5,6 +5,7 @@ const opzioni = {
         return {
             count: 0,
             newMessage: '',
+            receivedMessage: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -174,7 +175,7 @@ const opzioni = {
         clickContact(index) {
             this.count = index;
         },
-        addMessage() {
+        sentMessage() {
             let newMess = {
                 date: '10/01/2020 15:51:00',
                 message: this.newMessage,
@@ -184,7 +185,21 @@ const opzioni = {
             this.contacts[this.count].messages.push(newMess);
             console.log(newMess);
             this.newMessage = '';
-        }
+
+            setTimeout(this.backMessage, 2000 )
+        },
+        backMessage() {
+            let newMess = {
+                date: '10/01/2020 15:51:00',
+                message: 'ok',
+                status: 'received'
+            }
+
+            this.contacts[this.count].messages.push(newMess);
+            console.log(newMess);
+            this.receivedMessage = '';
+        },
+
     },
     mounted() {
         // stampare tutti i messaggi di samuele

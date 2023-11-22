@@ -204,7 +204,7 @@
                     <!-- messages part -->
                     <div class="col-8 messages d-flex flex-column justify-content-between p-0"> 
                         <!-- chat -->
-                        <div class="mx-5 my-4 overflow-y-scroll">
+                        <div class="contacts mx-5 my-4 overflow-y-scroll">
                             <!-- sent/receved -->
                             <!-- 
                                 SE lo statos è sent allora mi prende proprietà del sent
@@ -223,7 +223,7 @@
                                 </div>
                             </div>
 
-                            <!-- receved -->
+                            <!-- received -->
                             <!-- <div class="d-flex justify-content-start my-1">
                                 <div class="bg-light msg d-flex align-items-end rounded p-1">
                                     <p class="mx-2 pt-2">Ciao ciao prova</p>
@@ -251,7 +251,7 @@
 
                                 <div class="col p-0">
                                     <div class="">
-                                        <input @keyup.enter="addMessage" v-model="newMessage"
+                                        <input @keyup.enter="sentMessage" v-model="newMessage" v-model="receivedMessage"
                                         class="form-control smallText" type="text" placeholder="Scrivi un messaggio" aria-label=".form-control-sm example">
                                     </div>
                                 </div>
