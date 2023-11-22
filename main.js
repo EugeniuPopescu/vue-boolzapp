@@ -4,6 +4,7 @@ const opzioni = {
     data: function () {
         return {
             count: 0,
+            newMessage: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -172,6 +173,17 @@ const opzioni = {
     methods: {
         clickContact(index) {
             this.count = index;
+        },
+        addMessage() {
+            let newMess = {
+                date: '10/01/2020 15:51:00',
+                message: this.newMessage,
+                status: 'sent'
+            }
+
+            this.contacts[this.count].messages.push(newMess);
+            console.log(newMess);
+            this.newMessage = '';
         }
     },
     mounted() {

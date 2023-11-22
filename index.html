@@ -251,7 +251,8 @@
 
                                 <div class="col p-0">
                                     <div class="">
-                                        <input class="form-control smallText" type="text" placeholder="Scrivi un messaggio" aria-label=".form-control-sm example">
+                                        <input @keyup.enter="addMessage" v-model="newMessage"
+                                        class="form-control smallText" type="text" placeholder="Scrivi un messaggio" aria-label=".form-control-sm example">
                                     </div>
                                 </div>
 
