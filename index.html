@@ -86,8 +86,8 @@
 
                         <!-- contacts -->
                         <div class="contacts overflow-y-auto">
-                            <div v-for="(contact, i) in contacts"
-                            class="d-flex justify-content-between bg-light p-2 border-top">
+                            <div v-for="(contact, i) in contacts" @click="clickContact(i)"
+                            class="contact d-flex justify-content-between p-2 border-top">
                                 <div class="d-flex">
                                     <img :src="contact.avatar" >
                                     <div class="d-flex flex-column">
@@ -204,17 +204,17 @@
                     <!-- messages part -->
                     <div class="col-8 messages d-flex flex-column justify-content-between p-0"> 
                         <!-- chat -->
-                        <div class="mx-5 my-4 overflow-y-visible">
+                        <div class="mx-5 my-4 overflow-y-scroll">
                             <!-- sent/receved -->
                             <!-- 
                                 SE lo statos è sent allora mi prende proprietà del sent
                                 ALTRIMENTI mi prende le proprietà del recived
                              -->
-                            <div v-for="(message, i) in contacts[0].messages"
+                            <div v-for="(message, i) in contacts[count].messages"
                             :class="message.status == 'sent' ? 'd-flex justify-content-end' : 'd-flex justify-content-start'"
                             class="my-1">
                                 <!-- 
-                                    ternario per regolarmi il div
+                                    ternario per regolarmi il div sent/recived
                                  -->
                                 <div :class="message.status == 'sent' ? 'sent' : 'bg-light' "
                                 class="msg d-flex align-items-end rounded p-1">
@@ -232,9 +232,12 @@
                             </div> -->
 
                             <!-- sent -->
-                            <!-- <div class="d-flex justify-content-end my-1">
-                                <div class="sent msg d-flex align-items-end rounded p-1">
-                                    <p class="mx-2 pt-2">Ciao ciao erfaefaesfwes</p>
+                            <!-- <div v-for="(message, i) in contacts[0].messages"
+                            :class="message.status == 'sent' ? 'd-flex justify-content-end' : 'd-flex justify-content-start'"
+                            class=" my-1">
+                                <div :class="message.status == 'sent' ? 'sent' : 'bg-light'"
+                                class="d-flex align-items-end rounded p-1">
+                                    <p class="mx-2 pt-2">{{ message.message }}</p>
                                     <span class="smallText ms-3">15:50</span>
                                 </div>
                             </div> -->

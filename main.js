@@ -3,6 +3,7 @@ const { createApp } = Vue;
 const opzioni = {
     data: function () {
         return {
+            count: 0,
             contacts: [
                 {
                     name: 'Michele',
@@ -169,7 +170,13 @@ const opzioni = {
         }
     },
     methods: {
-        
+        clickContact(index) {
+            this.count = index;
+        }
+    },
+    mounted() {
+        // stampare tutti i messaggi di samuele
+        // console.log(this.clickContact);
     }
 };
 
