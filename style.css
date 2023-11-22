@@ -24,6 +24,11 @@ img {
 }
 
 /*** background ***/
+body {
+    height: 100vh;
+    background: rgb(218,219,214);
+    background: linear-gradient(0deg, rgba(218,219,214,1) 90%, rgba(66,148,136,1) 90%);
+}
 .messages {
     background-image: url(./img/mine.jpg);
 }
@@ -49,3 +54,4 @@ img {
 .contact:hover {
     background-color: rgb(197, 197, 197)
 }
+
